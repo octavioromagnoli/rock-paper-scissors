@@ -36,13 +36,10 @@ function playGame(input) {
         Vos: ${pipol}
         Compu: ${compu}
         Empates: ${empates}`)
-
-  if(pipol === 5){
-    pipol = compu = empates = 0;
-    console.log("GANASTE LA PARTIDA (5 Rondas)");
-  }
-  else if(compu === 5){
-    pipol = compu = empates = 0;
-    console.log("Gano la compu :((( (5 Rondas)")
-  }
 }
+
+const playButtons = document.querySelector(".playButtons");
+playButtons.addEventListener("click", (event) => {
+  let target = event.target;
+  playGame(target.id);
+});
